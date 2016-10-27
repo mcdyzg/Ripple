@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import Ripple from '../src/Ripple'
 
 // const App = React.createClass({
 // 	render:function(){
@@ -12,10 +13,18 @@ import ReactDOM from 'react-dom'
 // })
 
 class App extends React.Component {
+
+	click(){
+		console.log('ddd')
+	}
+
 	render(){
+		let t = this;
 		return (
 			<div className=''>
-				dfssdfs
+				<Ripple onClick={t.click} time='1s' method='wait' style={{background:'#EEE',height:'100px'}} className='d'>
+			    	dfasdf
+			    </Ripple>
 			</div>
 			)
 	}
